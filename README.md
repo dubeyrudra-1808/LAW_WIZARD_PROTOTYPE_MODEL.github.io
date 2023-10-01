@@ -1,0 +1,1 @@
+# LAW_WIZARD_PROTOTYPE_MODEL.github.io
