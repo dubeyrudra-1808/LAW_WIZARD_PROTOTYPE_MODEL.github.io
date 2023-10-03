@@ -11,17 +11,19 @@ background-repeat:repeat-y;
  position: absolute;
  top: 0;
  left: 0;
- height: 270vh;
+ height: 305vh;
  width: 100%;
  object-fit: cover;
  z-index: -1;
 }
 img {
-    margin-top: 175px;
-    margin-left: 43px;
-    width: 114%;
+    margin-top: 190px;
+    margin-left: 51px;
+    width: 123%;
     text-align: center;
     justify-content: center;
+
+
 
 }
 .bgimg{
