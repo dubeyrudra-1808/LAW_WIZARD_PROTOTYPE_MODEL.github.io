@@ -1,54 +1,96 @@
-body{
-    height: 140vh;
-   margin: 0;
-   padding: 0;
-  
-   background: transparent;
-   position: relative;
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-video{
-background-repeat:repeat-y;
- position: absolute;
- top: 0;
- left: 0;
- height: 305vh;
- width: 100%;
- object-fit: cover;
- z-index: -1;
+
+.master{
+    position: relative;
+    display: block;
 }
-img {
-    margin-top: 190px;
-    margin-left: 51px;
-    width: 123%;
-    text-align: center;
-    justify-content: center;
-
-
-
+.container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
 }
-.bgimg{
-    z-index: 2;
-    opacity: 0.46;
-    margin-left: -7px;
+
+/* Video styles */
+video {
     width: 100%;
-    animation: rotate 5s linear infinite;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    position: fixed;
+    z-index:  -100;
 }
-.p{
-    margin-left: 9%;
+
+/* Images styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.p {
+    margin-left: 5%; 
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    margin-top: 29px;
+    margin-top: 2%; 
     z-index: auto;
     position: absolute;
     font-size: 35px;
     color: white;
 }
 
-.q{
-    width: 60%;
+.q {
+    width: 80%; 
+    margin: 0 auto; 
+    text-align: center; 
 }
-audio{
-    height:30%;
-    width: 80%;
+
+audio {
+    height: auto; 
+    width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+    img {
+        margin-top: 5%; 
+    }
+
+    .p {
+        font-size: 28px; 
+    }
+
+    .q {
+        width: 90%; 
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        margin-top: 3%; 
+    }
+
+    .p {
+        font-size: 24px; 
+    }
+}
+
+@media (max-width: 768px) {
+    img {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        padding: 3px; /* Further reduce padding for smaller screens */
+    }
 }
