@@ -1,63 +1,82 @@
-body{
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-   background: transparent;
-   position: relative;
-}
-video{
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 135vh;
- object-fit: cover;
- z-index: -1;
-}
-img {
-    margin-top: 37px;
-    margin-left: 43px;
+/* Reset some default styles for the body */
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+ }
+ 
+ /* Style for the video element */
+ video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+ }
+ 
+ /* Style for the image */
+ img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 81%;
-    text-align: center;
-    justify-content: center;
-
-}
-.p{
-    margin-right: 16px;
+ }
+ 
+ /* Style for the paragraph */
+ .p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin-top: 66px;
-    z-index: auto;
-    position: absolute;
     font-size: 30px;
     color: white;
-}
-button{
-    margin-top: 355px;
+    z-index: auto;
+ }
+ 
+ /* Style for the button */
+ button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
     color: white;
-    margin-left: 33%;
     border-radius: 23px;
     padding: 2%;
     width: 130px;
-    background-color: rgb(28 229 28);
+    background-color: rgb(28, 229, 28);
     animation: blink 1s infinite;
-}
-.q{
-    width: 60%;
-}
-@media screen and (min-width:800px) {
-    button{
-        margin-top: 280px;
+ }
+ 
+ /* Define the blink animation */
+ @keyframes blink {
+    0%, 100% {
+       opacity: 1;
     }
-    .p{
-        margin-top: -60px;
-        margin-left: 43px;
-        width: 81%;
-        text-align: center;
-        justify-content: center;
-    
+    50% {
+       opacity: 0;
     }
-}
+ }
+ 
+ /* Media query for screens with a minimum width of 800px */
+ @media screen and (min-width: 800px) {
+    /* Adjust button margin-top and .p styles for larger screens */
+    button {
+       margin-top: 280px;
+    }
+    .p {
+       margin-top: -60px;
+       margin-left: 43px;
+       width: 81%;
+       text-align: center;
+       justify-content: center;
+    }
+ }
+ 
