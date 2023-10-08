@@ -64,11 +64,11 @@ video {
         margin-top: 5%; 
     }
 
-    .p {
+    .master {
         font-size: 28px; 
     }
 
-    .q {
+    .item {
         width: 90%; 
     }
 }
@@ -78,7 +78,7 @@ video {
         margin-top: 3%; 
     }
 
-    .p {
+    .master {
         font-size: 24px; 
     }
 }
