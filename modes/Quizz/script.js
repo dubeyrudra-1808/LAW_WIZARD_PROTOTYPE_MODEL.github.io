@@ -2,7 +2,7 @@ const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
 const scoreContainer = document.getElementById('score-container');
-const scoreDisplay = document.getElementById('score');
+const scoreDisplay = document.getElementById('score4jj');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
