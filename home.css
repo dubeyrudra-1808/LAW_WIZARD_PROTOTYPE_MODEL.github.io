@@ -1,5 +1,6 @@
 /* Reset some default styles for the body */
 body {
+   color: white;
    margin: 0;
    padding: 0;
    background: transparent;
@@ -8,10 +9,10 @@ body {
 /* Style for the image */
 img {
    position: absolute;
-   top: 50%;
+   top: 20%;
    left: 50%;
    transform: translate(-50%, -50%);
-   width: 81%;
+   width: 40%;
 }
 
 body {
@@ -29,15 +30,9 @@ body {
 }
 
 
-#s{
-   font-size: 36px;
-   overflow: hidden;
-   border-right: 2px solid #000;
-   
-   
-}
 #statement{
-   font-size: 36px;
+   color: #f2f2f2;
+   font-size: 48px;
    overflow: hidden;
    border-right: 2px solid #000;
    white-space: nowrap;
@@ -65,17 +60,22 @@ body {
 /* Style for the button */
 button {
    position: absolute;
-   top: 50%;
+   top: 40%;
    left: 50%;
    transform: translate(-50%, -50%);
    font-family: 'Poppins', sans-serif;
-   font-size: 22px;
+   font-size: 30px;
    color: white;
    border-radius: 23px;
-   padding: 2%;
+   padding:0;
    width: 130px;
+   height: 70px;
    background-color: rgb(238, 139, 9);
    animation: blink 1s infinite;
+}
+
+button .bs{
+   text-decoration: none;
 }
 
 /* Define the blink animation */
@@ -94,6 +94,13 @@ button {
    button {
        margin-top: 280px;
    }
-   
+
    /* Add or modify styles for larger screens here */
+   body {
+       background-color: #fff; /* Change the background color for larger screens */
+   }
+   
+   #statement2 {
+       font-size: 48px; /* Increase the font size for larger screens */
+   }
 }

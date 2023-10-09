@@ -42,17 +42,12 @@ h1 {
     max-height: 100vh;
     background-size: cover;
     display: block;
+    box-shadow: 6px 17px 40px rgb(235, 231, 231);
 }
 
-/* Video styles */
-video {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    position: fixed;
-    z-index:  -100;
-}
+
+
+
 
 
 
