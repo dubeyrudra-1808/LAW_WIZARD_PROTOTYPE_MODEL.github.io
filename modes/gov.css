@@ -1,0 +1,172 @@
+/* Reset some default styles for better cross-browser consistency */
+body, h1, h2, ul {
+    color: aqua;
+    margin: 0;
+    padding: 0;
+    }
+    
+    /* Define a base font size and font family */
+    body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    }
+    
+    .item h3{
+        color: black;
+    }
+    
+    /* Style the header section */
+    header {
+    background-color: #27273c;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    }
+    
+    header h1 {
+    font-size: 24px;
+    }
+    
+    /* Style the navigation menu */
+    nav ul {
+    list-style-type: none;
+    }
+    
+    nav ul li {
+    display: inline;
+    margin-right: 20px;
+    }
+    
+    nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    }
+    
+    .master {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #281c4a;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+    
+    h1 {
+        font-weight: 900;
+        font-family: 'Poppins', sans-serif;
+        font-size: 35px;
+    }
+    
+    .content {
+        margin-top: 60px;;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .item {
+        width: 350px; /* Set a fixed width for each item */
+        height: 350px; /* Set a fixed height for each item */
+        margin: 10px; /* Add spacing between items */
+    }
+    
+    .item img {
+        max-width: 100%;
+        max-height: 100vh;
+        background-size: cover;
+        display: block;
+        box-shadow: 6px 17px 40px rgb(2, 2, 2);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media (max-width: 768px) {
+        img {
+            margin-top: 5%; 
+        }
+    
+        .master {
+            font-size: 28px; 
+        }
+    
+        .item {
+            width: 90%; 
+        }
+    }
+    
+    @media (max-width: 480px) {
+        img {
+            margin-top: 3%; 
+        }
+    
+        .master {
+            font-size: 24px; 
+        }
+    }
+    
+    @media (max-width: 768px) {
+        img {
+            padding: 5px; /* Reduce padding for smaller screens */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        img {
+            padding: 3px; /* Further reduce padding for smaller screens */
+        }
+    }
+    /*styling footer*/
+    footer {
+    position: absolute; /* Position the footer absolutely at the bottom */
+    bottom: 0; /* Stick the footer to the bottom */
+    width: 100%; /* Make the footer span the entire width */
+    
+    color: #d004ef;
+    padding: 5px 0;
+    text-align: center;
+    }
+    
+    /* Responsive design using media queries */
+    @media (max-width: 768px) {
+    body {
+    font-size: 14px;
+    }
+    
+    header h1 {
+    font-size: 20px;
+    }
+    
+    nav ul li {
+    margin-right: 10px;
+    }
+    }
+    
+    @media (max-width: 480px) {
+    header {
+    padding: 10px;
+    }
+    
+    nav ul {
+    text-align: center;
+    }
+    
+    nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    display: block;
+    }
+    }
