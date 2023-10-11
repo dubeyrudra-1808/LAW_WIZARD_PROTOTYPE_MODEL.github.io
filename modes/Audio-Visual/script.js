@@ -65,7 +65,7 @@ function selectAnswer(e) {
   if (correct) {
     score++;
     scoreDisplay.innerText = `Score: ${score}
-    Level Complete...Move to next level`;
+    Please Go Back...to the next level.`;
   }
  
   if (currentQuestionIndex < questions.length - 1) {
@@ -98,12 +98,12 @@ const questions = [
   {
     question: 'It is related to which of the child rights?',
     answers: [
-      { text: ' Education', correct: true },
-      { text: 'Health', correct: false },
+      { text: ' Education', correct: false },
+      { text: 'Health', correct: true },
       { text: 'Poverty', correct: false }    ]
   },
   {
-    question: 'Is education right of every child?',
+    question: 'Is health-care right of every child?',
     answers: [
       { text: 'No,It is for only rich children.', correct: false },
       { text: 'No', correct: false },
@@ -114,16 +114,16 @@ const questions = [
   {
     question: 'All children have the right to_______',
     answers: [
-      { text: 'best education possible.', correct: true },
-      { text: 'free will to study.', correct: false },
-      { text: 'never go to school.', correct: false }
+      { text: 'get best health-care facility possible.', correct: true },
+      { text: 'free will to get drugged.', correct: false },
+      { text: 'never go to hospital.', correct: false }
     ]
   },
   {
     question: 'which right is concluded by this image?',
     answers: [
-      { text: 'Right to Education', correct: true },
-      { text: 'Right to health', correct: false },
+      { text: 'Right to Education', correct: false },
+      { text: 'Right to health', correct: true },
       {text: 'Right to facility', correct:false}
     ]
   }

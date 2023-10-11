@@ -1,0 +1,146 @@
+/* Reset some default styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded;
+  margin: 0;
+  padding: 0;
+}
+
+/* Define custom CSS variables */
+:root {
+  --hue-neutral: 274;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+/* Body styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(HD_Video_Background_VBHD0005_Background_Dvd_Background_Dvd_Download_Background_For_Chroma_Key.gif);
+  margin: 0;
+  padding: 0;
+}
+
+/* Center content within the .center-content div */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* Styles for the question image */
+.question-img {
+  margin-top: 100px;
+  width: 100%; /* Adjust this width to control the image's width */
+  max-width: 400px; /* Set a maximum width if needed */
+  margin-bottom: 10px;
+}
+
+/* Styles for the question image itself */
+.question-img video {
+  max-width: 100%; /* Ensure the image does not exceed the container width */
+  max-height: 100%; /* Ensure the image does not exceed the container height */
+  width: auto; /* Allow the image to scale with the container width */
+  height: auto; /* Allow the image to scale with the container height */
+}
+
+/* Container styles */
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+  font-size: x-large;
+}
+
+.animated-text {
+  font-size: 24px;
+  text-align: center;
+  background: linear-gradient(90deg, #f06, #9f6, #06f);
+  background-size: 200% 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: animatedText 5s linear infinite;
+}
+
+@keyframes animatedText {
+  0% {
+      background-position: 200% 0;
+  }
+  100% {
+      background-position: -200% 0;
+  }
+}
+
+/* Question styles */
+.question {
+  background-color: white; /* Set the initial background color to white */
+  transition: background-color 0.3s;
+}
+
+.question.correct {
+  background-color: green; /* Change to green for correct answer */
+}
+
+.question.wrong {
+  background-color: red; /* Change to red for wrong answer */
+}
+
+/* Button grid styles */
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Button styles */
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+/* Start, Next, Restart button styles */
+.start-btn, .next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+/* Controls container styles */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hide elements with the 'hide' class */
+.hide {
+  display: none;
+}

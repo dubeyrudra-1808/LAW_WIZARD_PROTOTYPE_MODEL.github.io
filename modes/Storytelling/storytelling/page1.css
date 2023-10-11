@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(102, 76, 248);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 0px;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+h1 {
+    padding-left: 8px;
+    font-size: 55px;
+    font-family: math;
+    box-shadow: -8px 7px 6px greenyellow;
+    text-shadow: 2px 2px red;
+}
+
+p {
+    display: flex;
+    align-items: flex-start;
+    width: 60%;
+    text-align: left;
+    padding-left: 42px;
+    margin: 0px;
+}
+
+.imgs {
+    align-self: flex-end;
+    align-items: center;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    align-items: center;
+    height: 40px;
+    width: 40px;
+}
+
+.tap {
+    padding: 0px;
+    font-size: 10px;
+    margin: 0%;
+}
+
+.box {
+    background-color: rgb(255, 52, 208);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 48%;
+    position: relative;
+    box-shadow: 12px 10px 30px black;
+}
+
+button {
+    height: 40px;
+    width: 20%;
+    align-self: flex-end;
+    margin: 10px 20px;
+    border-radius: 40px;
+    background-color: greenyellow;
+    box-shadow: 1px 1px 6px 2px blue;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+@media only screen and (max-width:570px) {
+    .box{
+        width: 90%;
+    }
+    a{
+        font-size: 12px;
+    }
+}
