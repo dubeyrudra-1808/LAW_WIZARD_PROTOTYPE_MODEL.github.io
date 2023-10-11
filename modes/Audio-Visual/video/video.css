@@ -20,6 +20,9 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/hd/aa428070668927.5bab2b198b78b.gif );
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Center content within the .center-content div */
