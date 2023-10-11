@@ -64,7 +64,12 @@ function selectAnswer(e) {
   });
   if (correct) {
     score++;
-    scoreDisplay.innerText = `Score: ${score}`;
+    if(score<4){scoreDisplay.innerText = `Score: ${score}`;}
+    else{
+      scoreDisplay.innerText = `Score: ${score}
+      Excellent !!`;
+    }
+    
   }
   if (currentQuestionIndex < questions.length - 1) {
     nextButton.classList.remove('hide');

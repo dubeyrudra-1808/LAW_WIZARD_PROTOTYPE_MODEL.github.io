@@ -17,7 +17,9 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-image: url(HD_Video_Background_VBHD0005_Background_Dvd_Background_Dvd_Download_Background_For_Chroma_Key.gif);
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/hd/aa428070668927.5bab2b198b78b.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 body.correct {
@@ -80,7 +82,7 @@ body.wrong {
   --hue: var(--hue-wrong);
 }
 
-.start-btn, .next-btn {
+.start-btn, .next-btn{
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
