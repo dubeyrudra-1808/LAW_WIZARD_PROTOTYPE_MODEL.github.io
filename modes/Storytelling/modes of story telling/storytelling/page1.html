@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storytelling</title>
+    <link rel="stylesheet" href="page1.css">
+    <script>
+        let speaking = false;
+        let speech = null;
+
+        function speakText() {
+            const text = document.querySelector('p').textContent;
+            if (speaking) {
+                // If speech is already in progress, stop it
+                speechSynthesis.cancel();
+                speaking = false;
+            } else {
+                // If speech is not in progress, start it
+                speech = new SpeechSynthesisUtterance(text);
+                speech.rate = 0.80; // Adjust the speech rate as needed (1.0 is the default)
+                speechSynthesis.speak(speech);
+                speaking = true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>STORY TELLING</h1>
+        <div class="box">
+            <h2>"ABANDONED CHILD"</h2>
+            <div class="imgs">
+                <img src="pngwing.com (5).png" alt="" onclick="speakText()">
+            </div>
+            <p>Rohan,a brilliant boy in studies but due to financial condition of the family he was often discarded from attending the classes. He used to attend classes from outside just listening to the teacher from window and often get scolded for his interuption in answering the questions. His hard work and dedication had left no stone unturned and he successfully qualified ICS examination and had worked very hard on children education and made free education to children upto and also raised the standard of government schools,</p>
+            <button><a href="">NEXT</a></button>
+        </div>
+    </div>
+</body>
+
+</html>
