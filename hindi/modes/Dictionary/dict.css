@@ -1,0 +1,21 @@
+body{
+    background-image: url('plexus.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    margin-top: 80px;
+    margin-left: 450px;
+    height: 580px;
+    border-radius: 15px;
+   
+    /* background-color: rgb(62, 252, 62); */
+}
+h{
+  
+        padding: 99px;
+        margin-top: 30px;
+        justify-content: center;
+        text-align: center;
+        color: white;
+}

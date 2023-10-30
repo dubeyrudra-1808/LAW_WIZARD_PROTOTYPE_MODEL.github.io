@@ -10,80 +10,149 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/e5de940d24.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <style>
-        .navigation-bar {
-            background-color: #27273c;
-            color: white;
-            display: flex;
-            padding: 0px;
-            margin-bottom: 10px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-        }
-        
-        .logo {
-            height: 70px;
-        }
-        
-        .navigation-bar a {
-            color: white;
-            text-decoration: none;
-            margin: 17px 62px;
-        }
-        
-        .navigation-bar a:hover {
-            color: rgb(236, 251, 25);
-            text-shadow: 2px 2px 4px rgba(238, 233, 233, 0.5);
-        }
-        
-        @media (max-width: 768px) {
-            .navigation-bar {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .navigation-bar a {
-                margin: 7px 0;
-            }
-        }
-    </style>
 </head>
+<style>
+    .navigation-bar {
+        background-color: #27273c;
+        color: white;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        padding: 0px 0px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    
+    .logo {
+        height: 50px;
+    }
+    
+    .navigation-bar a {
+        color: white;
+        text-decoration: none;
+        margin: 17px 62px;
+    }
+    
+    .navigation-bar a.hindi {
+        color: #e96a40;
+        font-weight: 800;
+        font-size: 18px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+    
+    @keyframes buttonAnimation {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    @keyframes colorChange {
+        0% {
+            color: #1eb30b;
+        }
+        50% {
+            color: #ff6600;
+        }
+        100% {
+            color: #1eb30b;
+        }
+    }
+    
+    .navigation-bar a.hindi {
+        animation: colorChange 4s ease-in-out infinite, buttonAnimation 2s ease-in-out infinite;
+    }
+    
+    .navigation-bar a:hover {
+        color: rgb(236, 251, 25);
+        text-shadow: 2px 2px 4px rgba(238, 233, 233, 0.5);
+    }
+    
+    .navigation-bar a.hindi:hover {
+        text-shadow: none;
+    }
+    
+    .navigation-bar a.chatbot {
+        color: #e96a40;
+        font-weight: 800;
+        font-size: 12px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        animation: colorChange 4s ease-in-out infinite, buttonAnimation 2s ease-in-out infinite;
+    }
+    
+    .navigation-bar a.chatbot img {
+        border-radius: 50%;
+        height: 30px;
+    }
+    /* Add your responsive CSS here */
+    
+    @media (max-width: 768px) {
+        .navigation-bar {
+            flex-direction: column;
+            align-items: center;
+        }
+        .navigation-bar a {
+            margin: 7px 0;
+        }
+    }
+</style>
 
 <body>
-    <iframe src="bg.html" frameborder="0" scrolling="no" style="position: absolute; width: 100%; height: 100%; z-index: -100;"></iframe>
+
+    <iframe src="bg.html" frameborder="0" scrolling="no" style="position: absolute; width: 100%; height: 100%;z-index:-100"></iframe>
     <div class="master">
         <nav class="navigation-bar">
-            <a href="index.html"><img class="logo" src="../R-removebg-preview.png"></a>
-            <a href="index.html"><i class="fas fa-home" style="color: #ffffff;"></i> Home </a>
-            <a href="https://dubeyrudra-1808.github.io/LAW_WIZARD_PROTOTYPE_MODEL.github.io/modes/gov.html"><i class="fas fa-snowflake fa-spin" style="color: #ffffff;"></i> Current Policies of Government</a>
-            <a href="Dictionary/index.html" style="text-shadow: 2px 2px 4px rgba(238, 233, 233, 0.5);"><i class="fa-solid fa-book fa-bounce" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;"style="color: #ffffff;"></i> Dictionary </a>
-            <a href="team/Team.html"><i class="fas fa-users"></i> TEAM </a>
+            <a href="index.html"> <img class="logo" src="R.png"></a>
+            <a href="index.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i>     Home </a>
+            <a href="https://dubeyrudra-1808.github.io/LAW_WIZARD_PROTOTYPE_MODEL.github.io/modes/gov.html"><i class="fa-solid fa-snowflake fa-spin" style="color: #ffffff;"></i>     Current Policies of Government</a>
+            <a href="Dictionary/index.html"><i class="fa-solid fa-book fa-bounce" style="color: #ffffff;"></i>      Dictionary </a>
+            <a class="chatbot" href="https://advocatevibhutibhushan.com/chatbot/"> <img class="logo" src="chatbot.jpg"> chatbot</a>
+            <a class="hindi" href="/hindi/index.html "><i class=""></i> हिन्दी मे देखे</a>
+            <a href="team/Team.html"><i class="fa-solid fa-people-group "></i>TEAM </a>
+
         </nav>
-        
         <h1>Modes of Game</h1>
     </div>
     <div class="content">
         <div class="item">
-            <a href="Storytelling/modes.html"><img src="Storytelling/3.png" alt=""></a>
+            <a href="Storytelling/modes of story telling/modes.html"><img src="Storytelling/3.png" alt=""></a>
         </div>
         <div class="item">
-            <a href="puzzle/index.html"><img src="4.jpg" alt=""></a>
-        </div>
-        <div class="item">
-            <a href="Audio-Visual/level copy.html"><img src="6.png" alt=""></a>
+            <a href="Audio-Visual/index.html"><img src="6.png" alt=""></a>
         </div>
         <div class="item">
             <a href="spot the exploitation/spot_exploitation/page01.html"><img src="spot the exploitation/spot the exp.jpg" alt=""></a>
         </div>
         <div class="item">
+            <a href="puzzle/index.html"><img src="4.jpg" alt=""></a>
+        </div>
+       
+        <div class="item">
             <a href="Quizz/index.html"><img src="5.png" alt=""></a>
         </div>
+
+
         <div class="item">
             <a href="Dictionary/index.html"><img src="7.png" alt=""></a>
         </div>
+
+
+
+
+
     </div>
+
 </body>
 
 </html>

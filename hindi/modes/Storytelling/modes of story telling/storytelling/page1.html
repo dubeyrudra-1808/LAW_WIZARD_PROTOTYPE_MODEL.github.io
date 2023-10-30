@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storytelling</title>
+    <link rel="stylesheet" href="page1.css">
+    <script>
+        let speaking = false;
+        let speech = null;
+
+        function speakText() {
+            const text = document.querySelector('p').textContent;
+            if (speaking) {
+               
+                speechSynthesis.cancel();
+                speaking = false;
+            } else {
+               
+                speech = new SpeechSynthesisUtterance(text);
+                speech.rate = 1.00; 
+              speech.lang='hi';
+                speechSynthesis.speak(speech);
+                speaking = true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>कहानी सुनाना</h1>
+        <div class="box">
+            <h2>"परित्यक्त बच्चा"</h2>
+            <div class="imgs">
+                <img src="pngwing.com (5).png" alt="" onclick="speakText()">
+            </div>
+            <p>रोहन पढ़ाई में एक मेधावी लड़का था लेकिन परिवार की आर्थिक स्थिति के कारण उसे अक्सर कक्षाओं में जाने से मना कर दिया जाता था। वह बाहर से सिर्फ खिड़की से शिक्षक की बात सुनकर कक्षा में जाता था और अक्सर सवालों के जवाब देने में रुकावट के कारण उसे डांट पड़ती थी। उनकी कड़ी मेहनत और समर्पण ने कोई कसर नहीं छोड़ी और उन्होंने सफलतापूर्वक आईसीएस परीक्षा उत्तीर्ण की और बच्चों की शिक्षा पर बहुत मेहनत की और बच्चों को मुफ्त शिक्षा प्रदान की और सरकारी स्कूलों का स्तर भी बढ़ाया।</p>
+            <button><a href="">अगला</a></button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio-Listen</title>
+    <link rel="stylesheet" href="audio.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="center-content">
+<div class="question-img">
+  <audio src="hindi.mp3" controls>
+    Your browser does not support the audio element.
+  </audio>
+  
+</div>
+<div class="animated-text">
+<h2>इस ऑडियो से जुड़े सवाल का जवाब दें...</h2>
+</div>
+    <div class="container">
+        <div id="question-container" class="hide">
+          <div id="question">Question</div>
+          <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+          </div>
+        </div>
+        <div id="score-container" class="hide">
+          <p><span id="score">0</span></p>
+        </div>
+        <div class="controls">
+          <button id="start-btn" class="start-btn btn">प्रारम्भ</button>
+          <button id="next-btn" class="next-btn btn hide">अगला</button>
+          <button id="restart-btn" class="restart-btn btn hide">Restart</button>
+        </div>
+      </div>
+    </div>
+    <script src="audio.js"></script>
+    
+</body>
+</html>

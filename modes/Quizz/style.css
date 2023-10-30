@@ -1,99 +1,69 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  font-family: Gotham Rounded;
-}
-
-:root {
-  --hue-neutral: 200;
-  --hue-wrong: 0;
-  --hue-correct: 145;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/hd/aa428070668927.5bab2b198b78b.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-color: #f2f5f7;
 }
 
-body.correct {
-  --hue: var(--hue-correct);
+.humar {
+    align-content: center;
 }
 
-body.wrong {
-  --hue: var(--hue-wrong);
+.row {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+    text-align: center;
+    flex-direction: column; /* Stack rows vertically */
+    align-items: center; /* Center items horizontally */
 }
 
-.container {
-  width: 800px;
-  max-width: 80%;
-  background-color: white;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 0 10px 2px;
+.columns {
+    width: 30%;
+    margin: 10px;
+    padding: 1em 0;
 }
 
-.question {
-  background-color: white; /* Set the initial background color to white */
-  transition: background-color 0.3s;
+.animated-text {
+    font-size: 24px;
+    text-align: center;
+    background: linear-gradient(90deg, #f06, #9f6, #06f);
+    background-size: 200% 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: animatedText 5s linear infinite;
 }
 
-.question.correct {
-  background-color: green; /* Change to green for correct answer */
+@keyframes animatedText {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
 }
 
-.question.wrong {
-  background-color: red; /* Change to red for wrong answer */
+.card {
+    border: orange;
+    box-shadow: 0 0 2.2em rgba(25, 0, 58, 0.15);
+    padding: 1em;
+    border-radius: 0.6em;
+    background-color: #d988ed;
+    text-align: center;
+    cursor: pointer;
 }
 
-.btn-grid {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 10px;
-  margin: 20px 0;
+.card h2 {
+    font-weight: 500;
 }
 
-.btn {
-  --hue: var(--hue-neutral);
-  border: 1px solid hsl(var(--hue), 100%, 30%);
-  background-color: hsl(var(--hue), 100%, 50%);
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: white;
-  outline: none;
-}
-
-.btn:hover {
-  border-color: black;
-}
-
-.btn.correct {
-  --hue: var(--hue-correct);
-  color: black;
-}
-
-.btn.wrong {
-  --hue: var(--hue-wrong);
-}
-
-.start-btn, .next-btn{
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hide {
-  display: none;
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.7s;
+    background-color:#5e51eb;
+    color: #f2f5f7;
 }
